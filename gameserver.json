@@ -1,0 +1,58 @@
+{
+    "version": "2",
+    "templates": [
+        {
+            "type": 1,
+            "title": "Counterstrike 2",
+            "description": "Counterstrike 2 Dedicated Server",
+            "categories": [
+                "Gameserver"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
+            "image": "ich777/steamcmd:cs2",
+            "ports": [
+                "27015/tcp",
+                "27015/udp"
+            ],
+            "volumes": [
+                {
+                    "container": "/serverdata/steamcmd"
+                },
+                {
+                    "container": "/serverdata/serverfiles"
+                }
+            ],
+            "env": [
+                {
+                    "name": "GAME_ID",
+                    "label": "Steam Game ID",
+                    "default": "730"
+                },
+                {
+                    "name": "USERNAME",
+                    "label": "Steam User"
+                },
+                {
+                    "name": "PASSWRD",
+                    "label": "Steam Password"
+                },
+                {
+                    "name": "GAME_PARAMS",
+                    "label": "Game Start Parameter",
+                    "default": "-dedicated -dev +map de_inferno +game_type 0 +game_mode 1 -usercon"
+                },
+                {
+                    "name": "UID",
+                    "label": "Host Volume User ID (UID)",
+                    "default": "99"
+                },
+                {
+                    "name": "GAME_ID",
+                    "label": "Host Volume Group ID (GID)",
+                    "default": "100"
+                }
+            ]
+        }
+    ]
+}
