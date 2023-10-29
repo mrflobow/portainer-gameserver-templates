@@ -1464,7 +1464,7 @@
           "default": "99"
         },
         {
-          "name": "GAME_ID",
+          "name": "GID",
           "label": "Host Volume Group ID (GID)",
           "default": "100"
         }
